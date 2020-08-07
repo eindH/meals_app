@@ -1,19 +1,20 @@
 import 'package:flutter/material.dart';
-import 'package:meals_app/category_item.dart';
+import 'package:meals_app/widgets/category_item.dart';
 import 'package:meals_app/dummy_data.dart';
 
-import 'package:meals_app/categories_screen.dart';
+import 'package:meals_app/screens/categories_screen.dart';
 
 class CategoriesScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Meals app'),
-      ),
+      //appBar: AppBar(
+      //  title: const Text('Meals app'),
+      //),
       body: GridView(
         padding: EdgeInsets.all(25),
       children: DUMMY_CATEGORIES.map((catData) => CategoryItem(
+          catData.id,
           catData.title,
           catData.color,
         )).toList(),
